@@ -49,6 +49,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (confirm('Are you sure you want to submit?')) {
         alert('Successful signup!');
+        form.reset();
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        successMessage.textContent = '';
     } else {
         emailInput.value = '';
         passwordInput.value = '';
